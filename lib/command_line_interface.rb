@@ -1,5 +1,5 @@
 def welcome
-  "Welcome Stars People!!!!!"
+  puts "Welcome Stars People!!!!!"
 end
 
 def get_character_from_user
