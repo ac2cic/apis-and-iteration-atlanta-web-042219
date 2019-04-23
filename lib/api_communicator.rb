@@ -8,7 +8,7 @@ def get_character_movies_from_api(character_name)
   response_hash = JSON.parse(response_string)
   movies_array = []
   response_hash["results"].each do |char|
-    if char ["name"] == character_name
+    if char ["name"].downcase == (character_name.downcase)
       movies_array = char["films"]
     end
   end
@@ -34,7 +34,7 @@ end
 
 def print_movies(films)
   films.each do |film|
-    titles_together = "#{film}"
+    puts "#{film["title"]}"
   end
   # some iteration magic and puts out the movies in a nice lis
 end
